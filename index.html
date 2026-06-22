@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Standup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<h1>Daily Standup Meeting</h1>
+<p>Remote team standup facilitator</p>
+</header>
+
+<section id="setupCard" class="card">
+
+<h2>Team Setup</h2>
+
+<div class="input-row">
+<input
+type="text"
+id="memberInput"
+placeholder="Enter team member name"
+/>
+
+<button id="addBtn">Add Member</button>
+</div>
+
+<ul id="memberList"></ul>
+
+<p class="hint">Minimum 3 members • Maximum 6 members</p>
+
+<button id="startBtn" class="primary-btn">
+Start Standup
+</button>
+
+</section>
+
+<section id="meetingCard" class="card hidden">
+
+<div class="meeting-header">
+<h2 id="memberTitle"></h2>
+<span id="counter"></span>
+</div>
+
+<div class="progress-bar">
+<div id="progress"></div>
+</div>
+
+<label>What did you complete yesterday?</label>
+<textarea id="yesterday"></textarea>
+
+<label>What are you working on today?</label>
+<textarea id="today"></textarea>
+
+<label>Any blockers?</label>
+<textarea id="blockers"></textarea>
+
+<button id="nextBtn" class="primary-btn">
+Save & Continue
+</button>
+
+</section>
+
+<section id="summaryCard" class="card hidden">
+
+<h2>Standup Summary</h2>
+
+<textarea
+id="summaryText"
+class="summary-box"
+readonly
+></textarea>
+
+<div class="summary-actions">
+<button id="copyBtn">
+Copy Summary
+</button>
+
+<button id="downloadBtn">
+Download TXT
+</button>
+
+<button id="restartBtn">
+New Session
+</button>
+</div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
